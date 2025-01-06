@@ -35,11 +35,6 @@ modules:
       - type: archive
         url: https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.6/wxWidgets-3.2.6.tar.bz2
         sha256: 939e5b77ddc5b6092d1d7d29491fe67010a2433cf9b9c0d841ee4d04acb9dce7
-        x-checker-data:
-          type: html
-          url: https://www.wxwidgets.org/downloads
-          version-pattern: 'Latest Stable Release: ([\d\.-]+)'
-          url-template: https://github.com/wxWidgets/wxWidgets/releases/download/v$version/wxWidgets-$version.tar.bz2
 
   - name: ffmpeg
     config-opts:
@@ -66,12 +61,8 @@ modules:
       - /share/ffmpeg/examples
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-7.1.tar.xz
-        sha256: 40973d44970dbc83ef302b0609f2e74982be2d85916dd2ee7472d30678a7abe6
-        x-checker-data:
-          type: anitya
-          project-id: 5405
-          url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
+        url: https://ffmpeg.org/releases/ffmpeg-6.1.2.tar.xz
+        sha256: 3b624649725ecdc565c903ca6643d41f33bd49239922e45c9b1442c63dca4e38
 
   - name: spek
     buildsystem: autotools
@@ -79,6 +70,3 @@ modules:
       - type: git
         url: https://github.com/MikeWang000000/spek-X
         tag: v0.9.3
-        #x-checker-data:
-        #  type: git
-        #  tag-pattern: ^v([\d.]+)$
