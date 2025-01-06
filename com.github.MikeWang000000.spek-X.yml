@@ -1,4 +1,4 @@
-app-id: cc.spek.Spek
+app-id: com.github.MikeWang000000.spek-X
 runtime: org.freedesktop.Platform
 runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
@@ -73,9 +73,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: git
-        url: https://github.com/alexkay/spek
-        #tag: v0.8.5
-        commit: b1600d9926fa434330171cbebb407d2d0ccdcf03
+        url: https://github.com/MikeWang000000/spek-X
+        tag: v0.9.3
         #x-checker-data:
         #  type: git
         #  tag-pattern: ^v([\d.]+)$

@@ -1,24 +1,16 @@
-# Spek Flatpak
+# Spek-X Flatpak
 
-📦 Flatpak Package of Spek for Linux
+📦 Flatpak Package of Spek-X for Linux
 
-Spek is an acoustic spectrum analyser written in C and C++. It uses FFmpeg
+Spek-X is an acoustic spectrum analyser written in C and C++. It uses FFmpeg
 libraries for audio decoding and wxWidgets for the GUI.
 
-Find out more about Spek on its website: <http://spek.cc/>
-
-## Installing
-
-I'm hosting this Flatpak on my own Flatpak Repo. You can install it from there like this:
-
-```bash
-flatpak install https://flatpak.nils.moe/repo/appstream/cc.spek.Spek.flatpakref
-```
+This fork uses [Spek-X](https://github.com/MikeWang000000/spek-X) by MikeWang000000.
 
 ## Building
 
 ```bash
-flatpak-builder --install-deps-from=flathub --force-clean build-dir cc.spek.Spek.yml
+flatpak-builder --install-deps-from=flathub --force-clean build-dir com.github.MikeWang000000.Spek-X.yml
 ```
 
 ## Update shared-modules
