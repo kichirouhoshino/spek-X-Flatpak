@@ -4,7 +4,6 @@ runtime-version: '47'
 sdk: org.gnome.Sdk
 command: spek
 default-branch: stable
-rename-appdata-file: spek.metainfo.xml
 rename-desktop-file: spek.desktop
 rename-icon: spek
 copy-icon: true
@@ -42,3 +41,11 @@ modules:
       - type: git
         url: https://github.com/MikeWang000000/spek-X
         tag: v0.9.4
+
+  - name: metainfo
+    buildsystem: simple
+    sources:
+      - type: file
+        path: com.github.MikeWang000000.spek-X.appdata.xml
+    build-commands:
+      - install -Dm644 ${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
