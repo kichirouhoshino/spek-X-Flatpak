@@ -1,7 +1,7 @@
 app-id: com.github.MikeWang000000.spek-X
-runtime: org.freedesktop.Platform
-runtime-version: '24.08'
-sdk: org.freedesktop.Sdk
+runtime: org.gnome.Platform
+runtime-version: '47'
+sdk: org.gnome.Sdk
 command: spek
 default-branch: stable
 rename-appdata-file: spek.metainfo.xml
@@ -36,37 +36,9 @@ modules:
         url: https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.6/wxWidgets-3.2.6.tar.bz2
         sha256: 939e5b77ddc5b6092d1d7d29491fe67010a2433cf9b9c0d841ee4d04acb9dce7
 
-  - name: ffmpeg
-    config-opts:
-      # See windows builds for reference
-      # https://github.com/mxe/mxe/blob/master/src/ffmpeg.mk
-      # https://github.com/alexkay/spek/blob/master/dist/win/mxe.diff
-      - --enable-static
-      - --disable-shared
-      - --disable-debug
-      - --disable-doc
-      - --disable-avdevice
-      - --disable-avfilter
-      - --disable-swscale
-      - --disable-programs
-      - --disable-muxers
-      - --disable-zlib
-      - --disable-bzlib
-      - --disable-iconv
-      - --disable-bsfs
-      - --disable-filters
-      - --disable-encoders
-      - --disable-hwaccels
-    cleanup:
-      - /share/ffmpeg/examples
-    sources:
-      - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-6.1.2.tar.xz
-        sha256: 3b624649725ecdc565c903ca6643d41f33bd49239922e45c9b1442c63dca4e38
-
   - name: spek
     buildsystem: autotools
     sources:
       - type: git
         url: https://github.com/MikeWang000000/spek-X
-        tag: v0.9.3
+        tag: v0.9.4
